@@ -6,18 +6,23 @@ require 'aditya_tic_tac_toe/version'
 Gem::Specification.new do |spec|
   spec.name          = "aditya_tic_tac_toe"
   spec.version       = AdityaTicTacToe::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Aditya"]
+  spec.email         = ["aditya"]
+  spec.summary       = %q{Play the tic-tac-toe game in the Terminal.}
+  spec.description   = %q{Play the tic-tac-toe game in the Terminal. Supports fields of any size, and can be played with up to 5 players.}
   spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.license       = "Aditya Self"
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.files         = Dir["README.md", "LICENSE", "lib/**/*.rb"]
+  spec.executables   = ["aditya_tic-tac-toe"]
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "curses", "~> 1.0"
+  spec.add_dependency "tty", "= 0.1.0"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
 end
+
+
